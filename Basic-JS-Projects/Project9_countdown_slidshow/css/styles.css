@@ -26,9 +26,6 @@
   animation-name: filter;
   animation-duration: 2s;
 }
-.mySlides img{
-
-}
 
 @keyframes filter {
     from {
