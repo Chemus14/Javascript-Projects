@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/contact.css"
+    />
+    <script
+      src="js/contactForm.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <form
+      method=""
+      action=""
+      name="myForm"
+    >
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        placeholder="Your name.."
+        required
+      />
+
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder="Your last name.."
+        required
+      />
+
+      <label for="country">Country</label>
+      <select
+        id="country"
+        name="country"
+        required
+      >
+        <option
+          value=""
+          disabled
+          selected
+        >
+          Select a country
+        </option>
+        <option value="australia">Spain</option>
+        <option value="canada">Poland</option>
+        <option value="usa">United Kingdom</option>
+      </select>
+
+      <input
+        type="submit"
+        value="Submit"
+        onclick="validateForm(event)"
+      />
+      <p class="message"></p>
+    </form>
+  </body>
+</html>
