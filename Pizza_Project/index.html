@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Fantasy Pizza 🍕</title>
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="js/script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- NAVBAR-->
+      <nav class="navbar navbar-expand-lg bg-danger">
+        <div class="container-fluid container-xl">
+          <a
+            class="navbar-brand text-white"
+            href="#"
+            >Fantasy Pizza 🍕</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item text-warning">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item text-warning">
+                <a
+                  class="nav-link"
+                  href="#"
+                  >Order</a
+                >
+              </li>
+              <li class="nav-item text-warning">
+                <a
+                  class="nav-link"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item text-warning">
+                <a
+                  class="nav-link"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- END NAVBAR-->
+    </header>
+    <main>
+      <!-- CAROUSEL-->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide container-xl"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://cdn.colombia.com/gastronomia/2011/08/25/pizza-margarita-3684.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.colombia.com/gastronomia/2011/08/25/pizza-margarita-3684.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.colombia.com/gastronomia/2011/08/25/pizza-margarita-3684.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- END CAROUSEL-->
+    </main>
+    <!-- Section Menu -->
+    <section
+      id="menu"
+      class="menu bg-danger-subtle"
+    >
+      <h1 class="text-center">Menu</h1>
+      <div class="row sticky-top">
+        <div class="container bg-secondary-subtle mb-3">
+          <h4 class="text-center">Progress of your order..</h4>
+          <div
+            class="progress mb-3"
+            role="progressbar"
+            aria-label="Animated striped example"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              style="width: 100%"
+            ></div>
+          </div>
+          <div class="container">
+            <button
+              type="button"
+              class="btn-cancel-order btn btn-outline-dark btn-lg mb-2 ms-5"
+              id="cancel"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              id="place"
+              class="btn-place-order btn btn-warning btn-lg mb-2 ms-5"
+            >
+              Place Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <!-- Card for Orders -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Size</div>
+              <div class="card-body">
+                <h5 class="card-title">Choose the size for your pizza</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSize"
+                    id="flexRadioSize1"
+                    value="small"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSize1"
+                  >
+                    Small
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSize"
+                    id="flexRadioSize2"
+                    value="medium"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSize2"
+                  >
+                    Medium
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSize"
+                    id="flexRadioSize3"
+                    value="large"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSize3"
+                  >
+                    Large
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSize"
+                    id="flexRadioSize4"
+                    value="extra-large"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSize4"
+                  >
+                    Extra Large
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+          <!-- Card for Orders - Crust -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Crust</div>
+              <div class="card-body">
+                <h5 class="card-title">Choose the one you love more</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCrust"
+                    id="flexRadioCrust1"
+                    value="regular"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust1"
+                  >
+                    Regular
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCrust"
+                    id="flexRadioCrust2"
+                    value="garlic-butter"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust2"
+                  >
+                    Garlic Butter
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCrust"
+                    id="flexRadioCrust3"
+                    value="cheese-stuffed"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust3"
+                  >
+                    Cheese Stuffed +<span>£3.00</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCrust"
+                    id="flexRadioCrust4"
+                    value="spicy"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust4"
+                  >
+                    Spicy
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCrust"
+                    id="flexRadioCrust5"
+                    value="no-cheese"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust5"
+                  >
+                    No Cheese
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+          <!-- Card for Orders - Sauce  -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Sauces</div>
+              <div class="card-body">
+                <h5 class="card-title">Choose a sauce that you wish to add</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSauce"
+                    id="flexRadioSauce1"
+                    value="marinara-sauce"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCrust1"
+                  >
+                    Marinara Sauce
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSauce"
+                    id="flexRadioSauce2"
+                    value="white-sauce"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSauce2"
+                  >
+                    White Sauce
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSauce"
+                    id="flexRadioSauce3"
+                    value="barbacue-sauce"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSauce3"
+                  >
+                    Barbacue Sauce
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSauce"
+                    id="flexRadioSauce4"
+                    value="ketchup"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSauce4"
+                  >
+                    Ketchup
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioSauce"
+                    id="flexRadioSauce5"
+                    value="no-sauce"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioSauce5"
+                  >
+                    No Sauce
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+          <!-- Card for Orders - Cheese  -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Cheese</div>
+              <div class="card-body">
+                <h5 class="card-title">Do you want to make it more cheesy?</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCheese"
+                    id="flexRadioCheese1"
+                    value="regular"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCheese1"
+                  >
+                    Regular
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCheese"
+                    id="flexRadioCheese2"
+                    value="extra-cheese"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCheese2"
+                  >
+                    Extra Cheese +<span>£3.00</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioCheese"
+                    id="flexRadioCheese3"
+                    value="no-cheese"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCheese3"
+                  >
+                    No Cheese
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+          <!-- Card for Orders - Cheese  -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Veggies</div>
+              <div class="card-body">
+                <h5 class="card-title">Do you want add some salad?</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg1"
+                    value="tomatoes"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg1"
+                  >
+                    Tomatoes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg2"
+                    value="onions"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg2"
+                  >
+                    Onions
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg3"
+                    value="olives"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg3"
+                  >
+                    Olives
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg4"
+                    value="green-peppers"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg4"
+                  >
+                    Green Peppers
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg5"
+                    value="mushrooms"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg5"
+                  >
+                    Mushrooms
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckVeg6"
+                    value="spinach"
+                    name="flexCheckVeg"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckVeg6"
+                  >
+                    Spinach
+                  </label>
+                </div>
+                <div
+                  class="alert alert-warning mt-5"
+                  role="alert"
+                >
+                  <strong>Note:</strong> First veggie topping is complimentary,
+                  +<span class="text-danger">£1.00/topping</span> for additional
+                  toppings.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+          <!-- Card for Orders - Cheese  -->
+          <div class="col-lg-6 col-sm-12">
+            <div class="card mb-5">
+              <div class="card-header bg-secondary text-white">Meats</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Select the meat you want in your pizza
+                </h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckMeat1"
+                    value="pepperoni"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat1"
+                  >
+                    Pepperoni
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckMeat2"
+                    value="sausage"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat2"
+                  >
+                    Sausage
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckMeat3"
+                    value="pork-mince"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat3"
+                  >
+                    Pork Mince
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="chicken"
+                    id="flexCheckMeat4"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat4"
+                  >
+                    Chicken
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Anchovy"
+                    id="flexCheckMeat5"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat5"
+                  >
+                    Anchovy
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Bacon"
+                    id="flexCheckMeat6"
+                    name="flexCheckMeat"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexCheckMeat6"
+                  >
+                    Bacon
+                  </label>
+                </div>
+                <div
+                  class="alert alert-warning mt-5"
+                  role="alert"
+                >
+                  <strong>Note:</strong> First meat topping is complimentary,
+                  +<span class="text-danger">£1.00/topping</span> for additional
+                  toppings.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Card for Orders -->
+        </div>
+      </div>
+    </section>
+    <!-- SUMMARY -->
+    <section
+      id="summary"
+      class="order-summary"
+    >
+      <div class="table-responsive container">
+        <h1 class="text-center mt-3">Order Summary</h1>
+        <table class="table container-md border border-danger">
+          <thead class="bg-danger text-white">
+            <th>Items</th>
+            <th>Subtotal</th>
+          </thead>
+          <tbody></tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+    </section>
+    <!-- Info Contact Delivery -->
+    <section
+      id="delivery"
+      class="info-delivery bg-danger-subtle"
+    >
+      <div class="container mx-auto pb-3">
+        <h1 class="text-center mt-3 pt-3 pb-3">Delivery Information</h1>
+        <form class="mx-auto row g-3 p-3">
+          <div class="col-md-12">
+            <label
+              for="inputFirstName"
+              class="form-label"
+              >First Name</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="inputFirstName"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label
+              for="inputLastName"
+              class="form-label"
+              >Last Name</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="inputLastName"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label
+              for="inputEmail4"
+              class="form-label"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              required
+            />
+          </div>
+
+          <!-- <div class="input-group col-md-1">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Click the number to get your address"
+              aria-label="Click the number to get your address"
+              aria-describedby="button-addon2"
+              required
+              disabled
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              Button
+            </button>
+          </div> -->
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-dark"
+            >
+              Place Your Order
+            </button>
+            <div class="message"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="bg-dark pt-3 pb-3">
+      <p class="text-center text-white">Fantasy Pizza Copyright</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

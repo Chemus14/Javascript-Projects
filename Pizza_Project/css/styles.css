@@ -1,0 +1,102 @@
+/* Navbar*/
+
+.active{
+    color: yellow !important;
+}
+.nav-link {
+    position: relative;
+    font-weight: bolder !important;
+    font-size: larger !important;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 5px;
+    background-color: yellow;
+    transition: width 0.5s ease-in-out;
+  }
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+  }
+  
+
+/* Style radio buttons */
+input[type="radio"] {
+  /* Hide default radio buttons */
+  appearance: none;
+  -webkit-appearance: none;
+  /* Create custom radio buttons */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc !important;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  background-color: #fff !important;
+}
+/* Style checked radio buttons */
+input[type="radio"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d50f0f !important;
+}
+
+/* Style checkbox buttons */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #ccc !important;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  background-color: #d50f0f !important;
+}
+/* Style checked checkbox buttons */
+input[type="checkbox"]:checked::before {
+  font-size: 16px;
+  color: #fff;
+  background-color: #d50f0f !important;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px;
+}
+
+/* SUMMARY */
+
+.table {
+  width: 70% !important;
+
+}
+
+/* Buttons order */
+
+.btn-place-order, .btn-cancel-order{
+  display: none !important;
+}
+
+/* contact form */
+
+form {
+  width: 50%;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  box-shadow: 1px 1px 13px inset rgb(244, 61, 61);
+}
